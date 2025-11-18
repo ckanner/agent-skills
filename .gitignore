@@ -1,0 +1,67 @@
+# Private documentation (personal reference, not for distribution)
+_private_docs/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Thumbnails
+._*
+
+# macOS Directories
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Editor backup files
+*.bak
+*.backup
+*.backup.md
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node modules (if any skill needs them)
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Coverage and test outputs
+.coverage
+*.cover
+.pytest_cache/
+htmlcov/

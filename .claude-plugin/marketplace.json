@@ -1,0 +1,27 @@
+{
+  "name": "kanner-agent-skills",
+  "owner": {
+    "name": "Kanner",
+    "email": "kanner.chen@gmail.com"
+  },
+  "metadata": {
+    "description": "Kanner's collection of Claude Agent Skills for enhanced AI workflows",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "prompt-optimizer",
+      "description": "Optimize and refine prompts for AI models using comprehensive prompt engineering best practices",
+      "source": "./",
+      "strict": false,
+      "skills": ["./prompt-optimizer"]
+    },
+    {
+      "name": "jta",
+      "description": "AI-powered JSON i18n translation with agentic reflection mechanism for high-quality multilingual content",
+      "source": "./",
+      "strict": false,
+      "skills": ["./jta"]
+    }
+  ]
+}

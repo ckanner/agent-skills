@@ -311,7 +311,7 @@ skill-name/
 
 ### 贡献准则
 
-- 遵循 [Agent Skills 规范](https://docs.anthropic.com/docs/agents-and-tools/agent-skills)
+- 遵循 [Agent Skills 规范](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
 - 在 `SKILL.md` 中包含清晰的文档
 - 在适用时添加示例
 - 提交前进行充分测试

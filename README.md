@@ -311,7 +311,7 @@ Contributions are welcome! If you have ideas for new skills or improvements to e
 
 ### Guidelines
 
-- Follow the [Agent Skills specification](https://docs.anthropic.com/docs/agents-and-tools/agent-skills)
+- Follow the [Agent Skills specification](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
 - Include clear documentation in `SKILL.md`
 - Add examples when applicable
 - Test thoroughly before submitting

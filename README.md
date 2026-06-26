@@ -50,6 +50,11 @@ AI-powered JSON internationalization file translator with agentic reflection mec
 
 ---
 
+### 🔗 linkedin-growth
+
+Import leads from LinkedIn or Sales Navigator searches, qualify them against an ideal-customer profile, schedule safe connection invites across accounts, track acceptances, and withdraw stale pending requests.
+
+**Location:** [`linkedin-growth/`](./linkedin-growth/)
 ## 📦 Installation
 
 ### Method 1: Plugin Marketplace via Command Line (Recommended)

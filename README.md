@@ -50,6 +50,33 @@ AI-powered JSON internationalization file translator with agentic reflection mec
 
 ---
 
+### 🤖 Codex Delegate
+
+Delegate tasks that need a rendered interface observed, a browser driven, or a desktop
+application operated to the external Codex agent — then recover the evidence needed to act
+on the result.
+
+**Key Features:**
+- Dispatches self-contained tasks through `codex exec` with a schema-constrained verdict
+- **Artifact contract**: screenshots, recordings, and produced files land in a per-run
+  directory so they stay retrievable — the executor's return channel carries text only
+- Requires a saved screenshot for every failure, so results are verifiable rather than
+  merely asserted
+- Playbooks for post-deploy UI acceptance and for driving native GUI applications
+- Prefers browser automation over screen control, sidestepping screen-recording permissions
+
+**When to Use:** Verifying a released UI, checking whether a page renders as expected,
+driving software with no usable CLI, or any task whose deliverable is a file produced by a
+GUI application.
+
+**Location:** [`codex-delegate/`](./codex-delegate/)
+
+**Requirements:**
+- The Codex CLI (`codex exec`) installed and authenticated
+- A workspace the executor is allowed to write into
+
+---
+
 ## 📦 Installation
 
 ### Method 1: Plugin Marketplace via Command Line (Recommended)
@@ -63,6 +90,7 @@ AI-powered JSON internationalization file translator with agentic reflection mec
 # Step 2: Install the skills you need
 /plugin install prompt-optimizer@kanner-agent-skills
 /plugin install jta@kanner-agent-skills
+/plugin install codex-delegate@kanner-agent-skills
 
 # Step 3: Restart Claude Code to activate the skills
 ```
@@ -88,7 +116,8 @@ For team projects, configure the marketplace in your project's `.claude/settings
   },
   "enabledPlugins": {
     "prompt-optimizer@kanner-agent-skills": true,
-    "jta@kanner-agent-skills": true
+    "jta@kanner-agent-skills": true,
+    "codex-delegate@kanner-agent-skills": true
   }
 }
 ```
@@ -113,6 +142,7 @@ cd agent-skills
 # Step 3: Install plugins
 /plugin install prompt-optimizer@kanner-agent-skills
 /plugin install jta@kanner-agent-skills
+/plugin install codex-delegate@kanner-agent-skills
 ```
 
 ### Method 4: Direct File Installation

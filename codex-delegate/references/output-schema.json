@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "summary", "checks", "artifacts", "blockers"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["pass", "fail", "blocked"],
+      "description": "Overall verdict. 'blocked' means the task could not be performed at all, as opposed to a check having failed."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Two to five sentences: what was examined, what was found, and the single most important conclusion."
+    },
+    "checks": {
+      "type": "array",
+      "description": "One entry per expectation that was examined, in the order examined.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "verdict", "expected", "actual", "evidence"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short identifier for the expectation, e.g. 'empty-submit-shows-error'."
+          },
+          "verdict": {
+            "type": "string",
+            "enum": ["pass", "fail", "unclear"],
+            "description": "Use 'unclear' when the check could not be conclusively evaluated."
+          },
+          "expected": {
+            "type": "string",
+            "description": "What the expectation was, stated concretely."
+          },
+          "actual": {
+            "type": "string",
+            "description": "What was actually observed, with concrete detail (text seen, selector, URL, state)."
+          },
+          "evidence": {
+            "type": "array",
+            "description": "Absolute paths of saved artifacts supporting this verdict. A 'fail' verdict requires at least one screenshot path.",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "description": "Absolute paths of every file produced by this run.",
+      "items": { "type": "string" }
+    },
+    "blockers": {
+      "type": "array",
+      "description": "Anything that prevented a check from being performed: missing permissions, auth failures, absent dependencies. Empty when nothing blocked.",
+      "items": { "type": "string" }
+    }
+  }
+}

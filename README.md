@@ -50,7 +50,7 @@ AI-powered JSON internationalization file translator with agentic reflection mec
 
 ---
 
-### 🤖 Codex Delegate
+### 🤖 UI Automation
 
 Delegate tasks that need a rendered interface observed, a browser driven, or a desktop
 application operated to the external Codex agent — then recover the evidence needed to act
@@ -69,7 +69,7 @@ on the result.
 driving software with no usable CLI, or any task whose deliverable is a file produced by a
 GUI application.
 
-**Location:** [`codex-delegate/`](./codex-delegate/)
+**Location:** [`ui-automation/`](./ui-automation/)
 
 **Requirements:**
 - The Codex CLI (`codex exec`) installed and authenticated
@@ -90,7 +90,7 @@ GUI application.
 # Step 2: Install the skills you need
 /plugin install prompt-optimizer@kanner-agent-skills
 /plugin install jta@kanner-agent-skills
-/plugin install codex-delegate@kanner-agent-skills
+/plugin install ui-automation@kanner-agent-skills
 
 # Step 3: Restart Claude Code to activate the skills
 ```
@@ -117,7 +117,7 @@ For team projects, configure the marketplace in your project's `.claude/settings
   "enabledPlugins": {
     "prompt-optimizer@kanner-agent-skills": true,
     "jta@kanner-agent-skills": true,
-    "codex-delegate@kanner-agent-skills": true
+    "ui-automation@kanner-agent-skills": true
   }
 }
 ```
@@ -142,7 +142,7 @@ cd agent-skills
 # Step 3: Install plugins
 /plugin install prompt-optimizer@kanner-agent-skills
 /plugin install jta@kanner-agent-skills
-/plugin install codex-delegate@kanner-agent-skills
+/plugin install ui-automation@kanner-agent-skills
 ```
 
 ### Method 4: Direct File Installation
@@ -158,10 +158,12 @@ git clone https://github.com/hikanner/agent-skills.git
 # Copy specific skills
 cp -r agent-skills/prompt-optimizer ~/.claude/skills/
 cp -r agent-skills/jta ~/.claude/skills/
+cp -r agent-skills/ui-automation ~/.claude/skills/
 
 # Or use symbolic links (recommended for development)
 ln -s $(pwd)/agent-skills/prompt-optimizer ~/.claude/skills/prompt-optimizer
 ln -s $(pwd)/agent-skills/jta ~/.claude/skills/jta
+ln -s $(pwd)/agent-skills/ui-automation ~/.claude/skills/ui-automation
 ```
 
 Skills will be available across all your projects.
@@ -177,6 +179,7 @@ mkdir -p .claude/skills
 # Copy the skills you need
 cp -r /path/to/agent-skills/prompt-optimizer .claude/skills/
 cp -r /path/to/agent-skills/jta .claude/skills/
+cp -r /path/to/agent-skills/ui-automation .claude/skills/
 
 # Commit to version control
 git add .claude/skills

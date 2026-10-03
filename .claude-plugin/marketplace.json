@@ -24,11 +24,11 @@
       "skills": ["./jta"]
     },
     {
-      "name": "codex-delegate",
+      "name": "ui-automation",
       "description": "Delegate screen- and GUI-dependent tasks to the external Codex agent and recover verifiable screenshot and artifact evidence",
       "source": "./",
       "strict": false,
-      "skills": ["./codex-delegate"]
+      "skills": ["./ui-automation"]
     }
   ]
 }

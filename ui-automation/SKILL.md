@@ -1,10 +1,10 @@
 ---
-name: codex-delegate
-description: Use when a task needs a rendered interface observed, a browser driven, or a desktop application operated — post-deploy UI acceptance, checking whether a page renders as expected, driving software with no usable CLI, or capturing visual evidence — and should be executed by the external Codex agent instead of in this session. Covers dispatching through `codex exec`, the artifact contract that makes screenshots and produced files retrievable, and how to recover and inspect the evidence.
+name: ui-automation
+description: Use when a task needs a rendered interface observed, a browser driven, or a desktop application operated — post-deploy UI acceptance, checking whether a page renders as expected, driving software with no usable CLI, or capturing visual evidence — and should be executed by the external Codex agent rather than in this session. Not for writing automation code such as test suites or Playwright specs. Covers dispatching through `codex exec`, the artifact contract, and evidence recovery.
 whenToUse: When a task needs eyes on a screen or hands on a GUI and should be delegated to Codex — post-deploy UI acceptance, verifying page rendering, driving a native app that has no CLI, or gathering screenshots as evidence.
 ---
 
-# Codex Delegate
+# UI Automation (delegated to Codex)
 
 ## Overview
 
@@ -27,6 +27,10 @@ them retrievable.
 
 Do **not** use this skill when the task is fully expressible as shell commands and file
 reads in this workspace — do that work directly.
+
+Do **not** use this skill to *write* automation code (test suites, Playwright or Cypress
+specs, scraping scripts). That is an ordinary coding task. This skill is for dispatching
+interface work to an external agent, not for producing automation source.
 
 ## Workflow
 
